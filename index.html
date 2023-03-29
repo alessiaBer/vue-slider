@@ -19,8 +19,8 @@
                     <img :src="'./assets/' + images[index].image" alt="" v-for="(image, index) in images">
                 </div>
                 <div class="details text-white text-end">
-                    <h3>CIAO</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque, consequatur?</p>
+                    <h3>{{images[activeImage].title}}</h3>
+                    <p>{{images[activeImage].text}}</p>
                 </div>
                 <nav class="d-flex flex-column justify-content-between">
                     <button class="prev">
