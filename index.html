@@ -18,7 +18,7 @@
                 <img :src="'./assets/' + images[activeImage].image" :alt="images[activeImage].title">
                 <!--/images-->
                 <div class="thumbs d-flex flex-column">
-                    <img :src="'./assets/' + images[index].image" alt="" v-for="(image, index) in images">
+                    <img :class="index === activeImage ? 'active' : ''" :src="'./assets/' + images[index].image" alt="" v-for="(image, index) in images" @click="selectImageByClick(index)">
                 </div>
                 <!-- /.thumbs -->
                 <div class="details text-white text-end">

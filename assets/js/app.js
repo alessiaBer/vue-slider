@@ -37,13 +37,15 @@ createApp({
         }
     },
     methods: {
-        changeImage(param) {
-            if (param === 'next') {
+        /**
+         * funzione per cambiare immagine a seconda del bottone cliccato
+         * @param {String} choice classe del bottone cliccato
+         */
+        changeImage(choice) {
+            if (choice === 'next') {
                 this.activeImage++
-                console.log('next clicked')
-            } else if (param === 'prev') {
+            } else if (choice === 'prev') {
                 this.activeImage--
-                console.log('prev clicked')
             }
 
             if (this.activeImage > this.images.length - 1) {
@@ -51,6 +53,13 @@ createApp({
             } else if (this.activeImage < 0) {
                 this.activeImage = this.images.length - 1
             }
+        },
+        /**
+         * funzione per selezionare come attiva un'immagine dalle thumbs
+         * @param {Number} index 
+         */
+        selectImageByClick(index) {
+            this.activeImage = index;
         }
     }
 }).mount('#app')

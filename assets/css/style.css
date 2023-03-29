@@ -17,12 +17,18 @@
 
 .thumbs {
     height: 100%;
+    background-color: black;
 }
 
 .thumbs > img {
     height: calc(100% / 5);
     width: 150px;
     object-fit: cover;
+}
+
+
+.thumbs > img:not(.active) {
+    opacity: 50%;
 }
 
 .details {
