@@ -12,6 +12,7 @@
 .carousel_container > img {
     width: 100%;
     object-fit: cover;
+    max-width: 966px;
 }
 
 .thumbs {
@@ -29,14 +30,14 @@
     bottom: 20px;
     right: 160px;
     z-index: 1000;
-    max-width: 700px;
+    max-width: 750px;
 }
 
 nav {
     position: absolute;
     height: 100%;
     top: 0;
-    right: 1.5rem;
+    right: 2.75rem;
 }
 
 nav > button {
@@ -46,4 +47,5 @@ nav > button {
    aspect-ratio: 1 / 1;
    margin: 0.5rem;
    background-color: rgba(255, 255, 255, 0.61);
+   color: black;
 }

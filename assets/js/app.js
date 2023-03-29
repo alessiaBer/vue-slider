@@ -36,5 +36,21 @@ createApp({
             ]
         }
     },
-    methods: {}
+    methods: {
+        changeImage(param) {
+            if (param === 'next') {
+                this.activeImage++
+                console.log('next clicked')
+            } else if (param === 'prev') {
+                this.activeImage--
+                console.log('prev clicked')
+            }
+
+            if (this.activeImage > this.images.length - 1) {
+                this.activeImage = 0;
+            } else if (this.activeImage < 0) {
+                this.activeImage = this.images.length - 1
+            }
+        }
+    }
 }).mount('#app')

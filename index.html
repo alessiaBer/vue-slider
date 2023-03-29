@@ -13,24 +13,30 @@
     
     <div id="app">
         <div class="container d-flex justify-content-center">
+
             <div class="carousel_container d-flex">
-                <img :src="'./assets/' + images[activeImage].image" alt="">
+                <img :src="'./assets/' + images[activeImage].image" :alt="images[activeImage].title">
+                <!--/images-->
                 <div class="thumbs d-flex flex-column">
                     <img :src="'./assets/' + images[index].image" alt="" v-for="(image, index) in images">
                 </div>
+                <!-- /.thumbs -->
                 <div class="details text-white text-end">
                     <h3>{{images[activeImage].title}}</h3>
                     <p>{{images[activeImage].text}}</p>
                 </div>
+                <!-- /.details -->
                 <nav class="d-flex flex-column justify-content-between">
-                    <button class="prev">
+                    <button class="prev" @click="changeImage('prev')">
                         <i class="fa-solid fa-chevron-up"></i>
                     </button>
-                    <button class="next">
+                    <button class="next" @click="changeImage('next')">
                         <i class="fa-solid fa-chevron-down"></i>
                     </button>
                 </nav>
+                <!-- /nav-->
             </div>
+            <!-- /.carousel -->
         </div>
     </div>
 
