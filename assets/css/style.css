@@ -6,7 +6,7 @@
     position: relative;
     height: 630px;
     justify-content: space-between;
-    width: 1000px;
+    width: 1200px;
 }
 
 .carousel_container > img {
@@ -20,6 +20,16 @@
 
 .thumbs > img {
     height: calc(100% / 5);
+    width: 150px;
+    object-fit: cover;
+}
+
+.details {
+    position: absolute;
+    bottom: 20px;
+    right: 160px;
+    z-index: 1000;
+    max-width: 700px;
 }
 
 nav {
